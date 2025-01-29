@@ -1,0 +1,2346 @@
+{
+ "geoms": {
+ "geom1_vline_selection": {
+ "geom": "vline",
+"classed": "geom1_vline_selection",
+"aes": {
+ "xintercept": "pred.log.lambda + mid.thresh",
+"colour": "model.name",
+"key": "model.name",
+"clickSelects": "model.name",
+"showSelected.variable": "selector",
+"showSelected.value": "mid.thresh",
+"showSelected2": "profile.chrom" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"alpha":      0.8,
+"size":        4,
+"help": "Predicted threshold shown for each model.",
+"showSelected": [ "mid.thresh", "profile.chrom" ],
+"clickSelects": "model.name",
+"help_showSelected": [ "profile.chrom", "one of: [BIC.thresh, learned.thresh]" ],
+"help_clickSelects": "model.name" 
+},
+"types": {
+ "colour": "rgb",
+"xintercept": "numeric",
+"key": "character",
+"clickSelects": "character",
+"showSelected.variable": "character",
+"showSelected.value": "numeric",
+"showSelected2": "character",
+"PANEL": "factor",
+"group": "character" 
+},
+"chunk_order": [
+ "profile.chrom" 
+],
+"nest_order": [
+ "PANEL",
+"showSelected.variable",
+"showSelected.value" 
+],
+"subset_order": [
+ "PANEL",
+"showSelected.variable" 
+],
+"columns": {
+ "common": [
+ "colour",
+"key",
+"clickSelects",
+"showSelected.variable",
+"showSelected.value",
+"PANEL",
+"group" 
+] 
+},
+"chunks": {
+ "1 1": 1,
+"1 11": 2,
+"1 17": 3,
+"1 2": 4,
+"1 3": 5,
+"1 4": 6,
+"10 1": 7,
+"10 11": 8,
+"10 17": 9,
+"10 2": 10,
+"10 3": 11,
+"10 4": 12,
+"11 1": 13,
+"11 11": 14,
+"11 17": 15,
+"11 2": 16,
+"11 3": 17,
+"11 4": 18,
+"13 1": 19,
+"13 11": 20,
+"13 17": 21,
+"13 2": 22,
+"13 3": 23,
+"13 4": 24,
+"4 1": 25,
+"4 11": 26,
+"4 17": 27,
+"4 2": 28,
+"4 3": 29,
+"4 4": 30,
+"6 1": 31,
+"6 11": 32,
+"6 17": 33,
+"6 2": 34,
+"6 3": 35,
+"6 4": 36,
+"8 1": 37,
+"8 11": 38,
+"8 17": 39,
+"8 2": 40,
+"8 3": 41,
+"8 4": 42 
+},
+"total": 42 
+},
+"geom2_segment_selection": {
+ "geom": "segment",
+"classed": "geom2_segment_selection",
+"aes": {
+ "x": "min.log.lambda",
+"y": "value",
+"xend": "max.log.lambda",
+"yend": "value",
+"showSelected1": "profile.chrom" 
+},
+"params": {
+ "lineend": "butt",
+"na.rm": false,
+"na.rm": false,
+"help": "Number of label errors (top) and number of segments (bottom), for the selected data sequence.",
+"showSelected": "profile.chrom",
+"help_showSelected": "profile.chrom" 
+},
+"types": {
+ "x": "numeric",
+"xend": "numeric",
+"y": "numeric",
+"yend": "numeric",
+"showSelected1": "character",
+"PANEL": "factor",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1",
+"PANEL" 
+],
+"subset_order": [
+ "showSelected1",
+"PANEL" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom3_point_selection": {
+ "geom": "point",
+"classed": "geom3_point_selection",
+"aes": {
+ "x": "value",
+"y": "0",
+"fill": "label",
+"showSelected1": "label",
+"showSelected2": "profile.chrom" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"size":        4,
+"help": "Dot shows limit of target interval of acceptable penalty values, used as the output when training the regression model.",
+"showSelected": [ "label", "profile.chrom" ],
+"help_showSelected": [ "label", "profile.chrom" ] 
+},
+"types": {
+ "fill": "rgb",
+"x": "numeric",
+"y": "numeric",
+"showSelected1": "character",
+"showSelected2": "character",
+"PANEL": "factor",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1",
+"showSelected2",
+"PANEL" 
+],
+"subset_order": [
+ "showSelected1",
+"showSelected2",
+"PANEL" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom4_tallrect_profile": {
+ "geom": "tallrect",
+"classed": "geom4_tallrect_profile",
+"aes": {
+ "xmin": "min/1e+06",
+"xmax": "max/1e+06",
+"fill": "label",
+"showSelected1": "profile.chrom",
+"showSelected2": "label" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"alpha":      0.3,
+"help": "Colored rectangle represents a label, which should contain either at least one change (purple breakpoint label), or no change (orange normal label).",
+"showSelected": [ "profile.chrom", "label" ],
+"help_showSelected": [ "profile.chrom", "label" ] 
+},
+"types": {
+ "fill": "rgb",
+"xmin": "numeric",
+"xmax": "numeric",
+"showSelected1": "character",
+"showSelected2": "factor",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1",
+"showSelected2" 
+],
+"subset_order": [
+ "showSelected1",
+"showSelected2" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom5_tallrect_profile": {
+ "geom": "tallrect",
+"classed": "geom5_tallrect_profile",
+"aes": {
+ "xmin": "min/1e+06",
+"xmax": "max/1e+06",
+"linetype": "status",
+"size": "model.name",
+"colour": "model.name",
+"showSelected.variable": "selector",
+"showSelected.value": "mid.thresh",
+"showSelected2": "profile.chrom",
+"showSelected3": "status" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"fill": "transparent",
+"help": "Border of rectangle shows if there is a label error. False negative occurs for no predicted change-points in a purple breakpoint label, and false positive occurs for at least one predicted change-point in an orange normal label.",
+"showSelected": [ "mid.thresh", "profile.chrom", "status" ],
+"help_showSelected": [ "profile.chrom", "status", "one of: [BIC.thresh, learned.thresh]" ] 
+},
+"types": {
+ "linetype": "numeric",
+"colour": "rgb",
+"size": "numeric",
+"xmin": "numeric",
+"xmax": "numeric",
+"showSelected.variable": "character",
+"showSelected.value": "numeric",
+"showSelected2": "character",
+"showSelected3": "character",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [
+ "profile.chrom" 
+],
+"nest_order": [
+ "showSelected3",
+"showSelected.variable",
+"showSelected.value" 
+],
+"subset_order": [
+ "showSelected3",
+"showSelected.variable" 
+],
+"columns": {
+ "common": [
+ "colour",
+"size",
+"showSelected.variable",
+"showSelected.value",
+"group" 
+] 
+},
+"chunks": {
+ "1 1": 1,
+"1 11": 2,
+"1 17": 3,
+"1 2": 4,
+"1 3": 5,
+"1 4": 6,
+"10 1": 7,
+"10 11": 8,
+"10 17": 9,
+"10 2": 10,
+"10 3": 11,
+"10 4": 12,
+"11 1": 13,
+"11 11": 14,
+"11 17": 15,
+"11 2": 16,
+"11 3": 17,
+"11 4": 18,
+"13 1": 19,
+"13 11": 20,
+"13 17": 21,
+"13 2": 22,
+"13 3": 23,
+"13 4": 24,
+"4 1": 25,
+"4 11": 26,
+"4 17": 27,
+"4 2": 28,
+"4 3": 29,
+"4 4": 30,
+"6 1": 31,
+"6 11": 32,
+"6 17": 33,
+"6 2": 34,
+"6 3": 35,
+"6 4": 36,
+"8 1": 37,
+"8 11": 38,
+"8 17": 39,
+"8 2": 40,
+"8 3": 41,
+"8 4": 42 
+},
+"total": 42 
+},
+"geom6_segment_profile": {
+ "geom": "segment",
+"classed": "geom6_segment_profile",
+"aes": {
+ "x": "chromStart/1e+06",
+"y": "1",
+"xend": "chromStart/1e+06",
+"yend": "-1",
+"key": "paste(model.name, chromStart)",
+"colour": "model.name",
+"size": "model.name",
+"showSelected.variable": "selector",
+"showSelected.value": "mid.thresh",
+"showSelected2": "profile.chrom" 
+},
+"params": {
+ "lineend": "butt",
+"na.rm": false,
+"na.rm": false,
+"linetype": "dashed",
+"showSelected": [ "mid.thresh", "profile.chrom" ],
+"help": "Dashed vertical segments represent predicted change-points.",
+"help_showSelected": [ "profile.chrom", "one of: [BIC.thresh, learned.thresh]" ] 
+},
+"types": {
+ "colour": "rgb",
+"size": "numeric",
+"x": "numeric",
+"xend": "numeric",
+"y": "numeric",
+"yend": "numeric",
+"key": "character",
+"showSelected.variable": "character",
+"showSelected.value": "numeric",
+"showSelected2": "character",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected2",
+"showSelected.variable",
+"showSelected.value" 
+],
+"subset_order": [
+ "showSelected2",
+"showSelected.variable" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom7_point_profile": {
+ "geom": "point",
+"classed": "geom7_point_profile",
+"aes": {
+ "x": "position/1e+06",
+"y": "logratio",
+"showSelected1": "profile.chrom" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"fill": "transparent",
+"showSelected": "profile.chrom",
+"help": "Black dots represent data sequence to segment.",
+"help_showSelected": "profile.chrom" 
+},
+"types": {
+ "x": "numeric",
+"y": "numeric",
+"showSelected1": "character",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [
+ "profile.chrom" 
+],
+"nest_order": [],
+"subset_order": [],
+"chunks": {
+ "1 1": 1,
+"1 2": 2,
+"1 3": 3,
+"1 4": 4,
+"1 11": 5,
+"1 17": 6,
+"4 1": 7,
+"4 2": 8,
+"4 3": 9,
+"4 4": 10,
+"4 11": 11,
+"4 17": 12,
+"6 1": 13,
+"6 2": 14,
+"6 3": 15,
+"6 4": 16,
+"6 11": 17,
+"6 17": 18,
+"8 1": 19,
+"8 2": 20,
+"8 3": 21,
+"8 4": 22,
+"8 11": 23,
+"8 17": 24,
+"10 1": 25,
+"10 2": 26,
+"10 3": 27,
+"10 4": 28,
+"10 11": 29,
+"10 17": 30,
+"11 1": 31,
+"11 2": 32,
+"11 3": 33,
+"11 4": 34,
+"11 11": 35,
+"11 17": 36,
+"13 1": 37,
+"13 2": 38,
+"13 3": 39,
+"13 4": 40,
+"13 11": 41,
+"13 17": 42 
+},
+"total": 42 
+},
+"geom8_tallrect_thresholds": {
+ "geom": "tallrect",
+"classed": "geom8_tallrect_thresholds",
+"aes": {
+ "xmin": "offset - rect.w",
+"xmax": "offset + rect.w",
+"fill": "label",
+"showSelected1": "model.name",
+"showSelected2": "label",
+"showSelected3": "profile.chrom" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"size":      0.5,
+"help": "Vertical line shows limit of target interval of acceptable penalty values, with respect to the label in selected data sequence.",
+"showSelected": [ "model.name", "label", "profile.chrom" ],
+"help_showSelected": [ "model.name", "label", "profile.chrom" ] 
+},
+"types": {
+ "fill": "rgb",
+"xmin": "numeric",
+"xmax": "numeric",
+"showSelected1": "character",
+"showSelected2": "character",
+"showSelected3": "character",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1",
+"showSelected2",
+"showSelected3" 
+],
+"subset_order": [
+ "showSelected1",
+"showSelected2",
+"showSelected3" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom9_tallrect_thresholds": {
+ "geom": "tallrect",
+"classed": "geom9_tallrect_thresholds",
+"aes": {
+ "xmin": "min.thresh",
+"xmax": "max.thresh",
+"clickSelects.variable": "selector",
+"clickSelects.value": "mid.thresh",
+"showSelected1": "model.name" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"alpha":      0.2,
+"help": "Grey rectangle shows selected threshold.",
+"clickSelects": "mid.thresh",
+"showSelected": "model.name",
+"help_clickSelects": "one of: [BIC.thresh, learned.thresh]",
+"help_showSelected": "model.name" 
+},
+"types": {
+ "xmin": "numeric",
+"xmax": "numeric",
+"clickSelects.variable": "character",
+"clickSelects.value": "numeric",
+"showSelected1": "character",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1" 
+],
+"subset_order": [
+ "showSelected1" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom10_vline_thresholds": {
+ "geom": "vline",
+"classed": "geom10_vline_thresholds",
+"aes": {
+ "xintercept": "mid.thresh",
+"colour": "model.name",
+"key": "model.name",
+"showSelected.variable": "selector",
+"showSelected.value": "mid.thresh",
+"showSelected2": "model.name" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"help": "Vertical line shows selected threshold.",
+"showSelected": [ "mid.thresh", "model.name" ],
+"help_showSelected": [ "model.name", "one of: [BIC.thresh, learned.thresh]" ] 
+},
+"types": {
+ "colour": "rgb",
+"xintercept": "numeric",
+"key": "character",
+"showSelected.variable": "character",
+"showSelected.value": "numeric",
+"showSelected2": "character",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected2",
+"showSelected.variable",
+"showSelected.value" 
+],
+"subset_order": [
+ "showSelected2",
+"showSelected.variable" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom11_segment_thresholds": {
+ "geom": "segment",
+"classed": "geom11_segment_thresholds",
+"aes": {
+ "x": "min.thresh",
+"y": "errors",
+"colour": "model.name",
+"xend": "max.thresh",
+"yend": "errors",
+"clickSelects": "model.name" 
+},
+"params": {
+ "lineend": "butt",
+"na.rm": false,
+"na.rm": false,
+"alpha":      0.8,
+"size":        4,
+"clickSelects": "model.name",
+"help": "Segments represent total number of label errors, as a function of constant/threshold added to log(penalty).",
+"help_clickSelects": "model.name" 
+},
+"types": {
+ "colour": "rgb",
+"x": "numeric",
+"xend": "numeric",
+"y": "numeric",
+"yend": "numeric",
+"clickSelects": "character",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [],
+"subset_order": [],
+"chunks": 1,
+"total": 1 
+},
+"geom12_point_thresholds": {
+ "geom": "point",
+"classed": "geom12_point_thresholds",
+"aes": {
+ "x": "(max.thresh + min.thresh)/2",
+"y": "errors",
+"colour": "model.name",
+"fill": "threshold",
+"clickSelects.variable": "selector",
+"clickSelects.value": "mid.thresh",
+"showSelected1": "model.name",
+"showSelected2": "threshold" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"size":        4,
+"shape":       21,
+"help": "Dots represent predicted model, and min error models.",
+"showSelected": [ "model.name", "threshold" ],
+"clickSelects": "mid.thresh",
+"help_showSelected": [ "model.name", "threshold" ],
+"help_clickSelects": "one of: [BIC.thresh, learned.thresh]" 
+},
+"types": {
+ "fill": "rgb",
+"colour": "rgb",
+"x": "numeric",
+"y": "numeric",
+"clickSelects.variable": "character",
+"clickSelects.value": "numeric",
+"showSelected1": "character",
+"showSelected2": "character",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1",
+"showSelected2" 
+],
+"subset_order": [
+ "showSelected1",
+"showSelected2" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom13_text_regression": {
+ "geom": "text",
+"classed": "geom13_text_regression",
+"aes": {
+ "x": "left",
+"y": "log.penalty",
+"colour": "model.name",
+"key": "paste(model.name, sign.residual)",
+"label": "ifelse(sign.residual == 0, sprintf(\"%d intervals correctly predicted\", intervals), sprintf(\"total too %s = %.1f (%d/%d labels)\", ifelse(sign.residual == 1, \"high\", \"low\"), total.residual, intervals, possible[, ifelse(sign.residual == 1, positive, negative)]))",
+"showSelected.variable": "selector",
+"showSelected.value": "mid.thresh" 
+},
+"params": {
+ "parse": false,
+"check_overlap": false,
+"na.rm": false,
+"na.rm": false,
+"help": "Error rates with respect to the target interval of acceptable penalty values.",
+"showSelected": "mid.thresh",
+"help_showSelected": "one of: [BIC.thresh, learned.thresh]",
+"anchor": "start" 
+},
+"types": {
+ "colour": "rgb",
+"x": "numeric",
+"y": "numeric",
+"key": "character",
+"label": "character",
+"showSelected.variable": "character",
+"showSelected.value": "numeric",
+"PANEL": "factor",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "PANEL",
+"showSelected.variable",
+"showSelected.value" 
+],
+"subset_order": [
+ "PANEL",
+"showSelected.variable" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom14_abline_regression": {
+ "geom": "segment",
+"classed": "geom14_abline_regression",
+"aes": {
+ "slope": "slope",
+"key": "model.name",
+"colour": "model.name",
+"intercept": "intercept + mid.thresh",
+"showSelected.variable": "selector",
+"showSelected.value": "mid.thresh" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"showSelected": "mid.thresh",
+"help": "Regression lines, for predicting log(penalty) values.",
+"help_showSelected": "one of: [BIC.thresh, learned.thresh]" 
+},
+"types": {
+ "colour": "rgb",
+"key": "character",
+"showSelected.variable": "character",
+"showSelected.value": "numeric",
+"PANEL": "factor",
+"x": "numeric",
+"y": "numeric",
+"xend": "numeric",
+"yend": "numeric",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "PANEL",
+"showSelected.variable",
+"showSelected.value" 
+],
+"subset_order": [
+ "PANEL",
+"showSelected.variable" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom15_segment_regression": {
+ "geom": "segment",
+"classed": "geom15_segment_regression",
+"aes": {
+ "x": "feature",
+"y": "pred.plus.thresh",
+"xend": "feature",
+"yend": "pred.plus.thresh - residual",
+"key": "paste(model.name, profile.id, chromosome)",
+"colour": "model.name",
+"showSelected.variable": "selector",
+"showSelected.value": "mid.thresh" 
+},
+"params": {
+ "lineend": "butt",
+"na.rm": false,
+"na.rm": false,
+"size":        1,
+"help": "Segments represent residuals/errors with respect to the target interval of acceptable penalty values.",
+"showSelected": "mid.thresh",
+"help_showSelected": "one of: [BIC.thresh, learned.thresh]" 
+},
+"types": {
+ "colour": "rgb",
+"x": "numeric",
+"xend": "numeric",
+"y": "numeric",
+"yend": "numeric",
+"key": "character",
+"showSelected.variable": "character",
+"showSelected.value": "numeric",
+"PANEL": "factor",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "PANEL",
+"showSelected.variable",
+"showSelected.value" 
+],
+"subset_order": [
+ "PANEL",
+"showSelected.variable" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom16_point_regression": {
+ "geom": "point",
+"classed": "geom16_point_regression",
+"aes": {
+ "x": "feature",
+"y": "pred.plus.thresh",
+"key": "paste(model.name, profile.id, chromosome)",
+"size": "status",
+"colour": "model.name",
+"showSelected.variable": "selector",
+"showSelected.value": "mid.thresh" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"help": "A dot is drawn at the predicted log(penalty) value, for each data sequence with a prediction error, with respect to the target interval of acceptable penalty values.",
+"showSelected": "mid.thresh",
+"help_showSelected": "one of: [BIC.thresh, learned.thresh]" 
+},
+"types": {
+ "size": "numeric",
+"colour": "rgb",
+"x": "numeric",
+"y": "numeric",
+"key": "character",
+"showSelected.variable": "character",
+"showSelected.value": "numeric",
+"PANEL": "factor",
+"fill": "rgb",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "PANEL",
+"showSelected.variable",
+"showSelected.value" 
+],
+"subset_order": [
+ "PANEL",
+"showSelected.variable" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom17_point_regression": {
+ "geom": "point",
+"classed": "geom17_point_regression",
+"aes": {
+ "x": "feature",
+"y": "value",
+"fill": "label",
+"clickSelects": "profile.chrom",
+"showSelected1": "label" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"alpha":      0.8,
+"size":        4,
+"shape":       21,
+"showSelected": "label",
+"help": "Dots represent limits of the target interval of acceptable penalty values.",
+"clickSelects": "profile.chrom",
+"help_showSelected": "label",
+"help_clickSelects": "profile.chrom" 
+},
+"types": {
+ "fill": "rgb",
+"x": "numeric",
+"y": "numeric",
+"clickSelects": "character",
+"showSelected1": "character",
+"PANEL": "factor",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1",
+"PANEL" 
+],
+"subset_order": [
+ "showSelected1",
+"PANEL" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom18_text_roc": {
+ "geom": "text",
+"classed": "geom18_text_roc",
+"aes": {
+ "x": "FPR",
+"y": "TPR",
+"colour": "model.name",
+"label": "sprintf(\"AUC = %.4f\", auc)",
+"clickSelects": "model.name",
+"showSelected1": "model.name" 
+},
+"params": {
+ "parse": false,
+"check_overlap": false,
+"na.rm": false,
+"na.rm": false,
+"help": "AUC = Area Under the ROC Curve.",
+"clickSelects": "model.name",
+"showSelected": "model.name",
+"help_clickSelects": "model.name",
+"help_showSelected": "model.name",
+"anchor": "start" 
+},
+"types": {
+ "colour": "rgb",
+"x": "numeric",
+"y": "numeric",
+"label": "character",
+"clickSelects": "character",
+"showSelected1": "character",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1" 
+],
+"subset_order": [
+ "showSelected1" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom19_path_roc": {
+ "geom": "path",
+"classed": "geom19_path_roc",
+"aes": {
+ "x": "FPR",
+"y": "TPR",
+"colour": "model.name",
+"group": "model.name",
+"clickSelects": "model.name",
+"showSelected1": "model.name" 
+},
+"params": {
+ "lineend": "butt",
+"linejoin": "round",
+"linemitre":        1,
+"na.rm": false,
+"na.rm": false,
+"size":        4,
+"alpha":      0.8,
+"clickSelects": "model.name",
+"help": "The Receiver Operating Characteristic (ROC) curve is a plot of True Positive Rate versus False Positive Rate, as the prediction threshold is varied.",
+"showSelected": "model.name",
+"help_clickSelects": "model.name",
+"help_showSelected": "model.name" 
+},
+"types": {
+ "colour": "rgb",
+"x": "numeric",
+"y": "numeric",
+"group": "character",
+"clickSelects": "character",
+"showSelected1": "character",
+"PANEL": "integer" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1",
+"group" 
+],
+"subset_order": [
+ "showSelected1" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom20_text_roc": {
+ "geom": "text",
+"classed": "geom20_text_roc",
+"aes": {
+ "x": "FPR + 0.05",
+"y": "TPR",
+"label": "sprintf(\"Predicted FPR=%.2f TPR=%.2f\", FPR, TPR)",
+"showSelected1": "model.name",
+"showSelected2": "threshold" 
+},
+"params": {
+ "parse": false,
+"check_overlap": false,
+"na.rm": false,
+"na.rm": false,
+"colour": "#00FF00",
+"help": "FPR and TPR at predicted threshold.",
+"showSelected": [ "model.name", "threshold" ],
+"help_showSelected": [ "model.name", "threshold" ],
+"anchor": "start" 
+},
+"types": {
+ "x": "numeric",
+"y": "numeric",
+"label": "character",
+"showSelected1": "character",
+"showSelected2": "character",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1",
+"showSelected2" 
+],
+"subset_order": [
+ "showSelected1",
+"showSelected2" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom21_point_roc": {
+ "geom": "point",
+"classed": "geom21_point_roc",
+"aes": {
+ "x": "FPR",
+"y": "TPR",
+"colour": "model.name",
+"fill": "threshold",
+"clickSelects.variable": "selector",
+"clickSelects.value": "mid.thresh",
+"showSelected1": "model.name",
+"showSelected2": "threshold" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"size":        4,
+"alpha":      0.7,
+"shape":       21,
+"clickSelects": "mid.thresh",
+"showSelected": [ "model.name", "threshold" ],
+"help": "Each dot on the ROC curve corresponds to an interval of thresholds, or constants which could be added to the predicted scores.",
+"help_clickSelects": "one of: [BIC.thresh, learned.thresh]",
+"help_showSelected": [ "model.name", "threshold" ] 
+},
+"types": {
+ "fill": "rgb",
+"colour": "rgb",
+"x": "numeric",
+"y": "numeric",
+"clickSelects.variable": "character",
+"clickSelects.value": "numeric",
+"showSelected1": "character",
+"showSelected2": "character",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1",
+"showSelected2" 
+],
+"subset_order": [
+ "showSelected1",
+"showSelected2" 
+],
+"chunks": 1,
+"total": 1 
+} 
+},
+"duration": {
+ "BIC.thresh":     2000,
+"learned.thresh":     2000 
+},
+"selectors": {
+ "label": {
+ "type": "multiple",
+"legend": true,
+"is.variable.value": false,
+"showSelected": true,
+"selected": [ "breakpoint", "normal" ],
+"levels": [ "breakpoint", "normal" ],
+"update": [
+ "geom3_point_selection",
+"geom4_tallrect_profile",
+"geom8_tallrect_thresholds",
+"geom17_point_regression" 
+] 
+},
+"status": {
+ "type": "multiple",
+"legend": true,
+"is.variable.value": false,
+"showSelected": true,
+"selected": [ "false positive", "correct", "false negative" ],
+"levels": [ "false positive", "correct", "false negative" ],
+"update": [
+ "geom5_tallrect_profile" 
+] 
+},
+"model.name": {
+ "legend": true,
+"is.variable.value": false,
+"type": "single",
+"clickSelects": true,
+"showSelected": true,
+"selected": "BIC",
+"levels": [ "BIC", "learned" ],
+"update": [
+ "geom1_vline_selection",
+"geom8_tallrect_thresholds",
+"geom9_tallrect_thresholds",
+"geom10_vline_thresholds",
+"geom11_segment_thresholds",
+"geom12_point_thresholds",
+"geom18_text_roc",
+"geom19_path_roc",
+"geom20_text_roc",
+"geom21_point_roc" 
+] 
+},
+"threshold": {
+ "type": "multiple",
+"legend": true,
+"is.variable.value": false,
+"showSelected": true,
+"selected": [ "min.error", "predicted", "other" ],
+"levels": [ "min.error", "predicted", "other" ],
+"update": [
+ "geom12_point_thresholds",
+"geom20_text_roc",
+"geom21_point_roc" 
+] 
+},
+"BIC.thresh": {
+ "is.variable.value": true,
+"type": "single",
+"showSelected": true,
+"clickSelects": true,
+"selected": "0.006",
+"update": [
+ "geom1_vline_selection",
+"geom5_tallrect_profile",
+"geom6_segment_profile",
+"geom9_tallrect_thresholds",
+"geom10_vline_thresholds",
+"geom12_point_thresholds",
+"geom13_text_regression",
+"geom14_abline_regression",
+"geom15_segment_regression",
+"geom16_point_regression",
+"geom21_point_roc" 
+],
+"duration":     2000 
+},
+"learned.thresh": {
+ "is.variable.value": true,
+"type": "single",
+"showSelected": true,
+"clickSelects": true,
+"selected": "0.037",
+"update": [
+ "geom1_vline_selection",
+"geom5_tallrect_profile",
+"geom6_segment_profile",
+"geom9_tallrect_thresholds",
+"geom10_vline_thresholds",
+"geom12_point_thresholds",
+"geom13_text_regression",
+"geom14_abline_regression",
+"geom15_segment_regression",
+"geom16_point_regression",
+"geom21_point_roc" 
+],
+"duration":     2000 
+},
+"profile.chrom": {
+ "is.variable.value": false,
+"type": "single",
+"showSelected": true,
+"chunks": "profile.chrom",
+"clickSelects": true,
+"selected": "8 2",
+"levels": [ "1 1", "1 2", "1 3", "1 4", "1 11", "1 17", "4 1", "4 2", "4 3", "4 4", "4 11", "4 17", "6 1", "6 2", "6 3", "6 4", "6 11", "6 17", "8 1", "8 2", "8 3", "8 4", "8 11", "8 17", "10 1", "10 2", "10 3", "10 4", "10 11", "10 17", "11 1", "11 2", "11 3", "11 4", "11 11", "11 17", "13 1", "13 2", "13 3", "13 4", "13 11", "13 17" ],
+"update": [
+ "geom1_vline_selection",
+"geom2_segment_selection",
+"geom3_point_selection",
+"geom4_tallrect_profile",
+"geom5_tallrect_profile",
+"geom6_segment_profile",
+"geom7_point_profile",
+"geom8_tallrect_thresholds",
+"geom17_point_regression" 
+] 
+} 
+},
+"plots": {
+ "selection": {
+ "panel_margin_lines":        1,
+"legend": {},
+"strips": {
+ "right": [
+ "errors",
+"n.segments" 
+],
+"top": [
+ "",
+"" 
+],
+"n": {
+ "top":        1,
+"right":        1 
+} 
+},
+"layout": {
+ "PANEL": [ "1", "2" ],
+"ROW": [ 1, 2 ],
+"COL": [ 1, 1 ],
+"variable": [ "errors", "n.segments" ],
+"SCALE_X": [ 1, 1 ],
+"SCALE_Y": [ 1, 2 ],
+"AXIS_Y": [ true, true ],
+"AXIS_X": [ false, true ],
+"coord_fixed": [ false, false ],
+"width_proportion": [        1,        1 ],
+"height_proportion": [      0.5,      0.5 ] 
+},
+"panel_background": {
+ "fill": "#FFFFFF",
+"colour": "transparent",
+"size":      0.5,
+"linetype":        1 
+},
+"panel_border": {
+ "fill": "transparent",
+"colour": "#7F7F7F",
+"size":      0.5,
+"linetype":        1 
+},
+"grid_major": {
+ "colour": "#E5E5E5",
+"size":      0.2,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+       -5,
+    -2.5,
+       0,
+     2.5 
+],
+[
+       -5,
+    -2.5,
+       0,
+     2.5 
+] 
+],
+"y": [
+ [
+        0,
+    0.25,
+     0.5,
+    0.75,
+       1 
+],
+[
+        5,
+      10,
+      15,
+      20 
+] 
+] 
+} 
+},
+"grid_minor": {
+ "colour": "#FAFAFA",
+"size":      0.5,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+       -5,
+   -3.75,
+    -2.5,
+   -1.25,
+       0,
+    1.25,
+     2.5,
+    3.75 
+],
+[
+       -5,
+   -3.75,
+    -2.5,
+   -1.25,
+       0,
+    1.25,
+     2.5,
+    3.75 
+] 
+],
+"y": [
+ [
+        0,
+   0.125,
+    0.25,
+   0.375,
+     0.5,
+   0.625,
+    0.75,
+   0.875,
+       1 
+],
+[
+      2.5,
+       5,
+     7.5,
+      10,
+    12.5,
+      15,
+    17.5,
+      20 
+] 
+] 
+} 
+},
+"axis1": {
+ "x": [
+       -5,
+    -2.5,
+       0,
+     2.5 
+],
+"xlab": [
+ "-5.0",
+"-2.5",
+"0.0",
+"2.5" 
+],
+"xrange": [  -5.1947, 4.288746 ],
+"xline": false,
+"xticks": true,
+"y": [
+        0,
+    0.25,
+     0.5,
+    0.75,
+       1 
+],
+"ylab": [
+ "0.00",
+"0.25",
+"0.50",
+"0.75",
+"1.00" 
+],
+"yrange": [    -0.05,     1.05 ],
+"yline": false,
+"yticks": true 
+},
+"axis2": {
+ "x": [
+       -5,
+    -2.5,
+       0,
+     2.5 
+],
+"xlab": [
+ "-5.0",
+"-2.5",
+"0.0",
+"2.5" 
+],
+"xrange": [  -5.1947, 4.288746 ],
+"xline": false,
+"xticks": true,
+"y": [
+        5,
+      10,
+      15,
+      20 
+],
+"ylab": [
+ "5",
+"10",
+"15",
+"20" 
+],
+"yrange": [     0.05,    20.95 ],
+"yline": false,
+"yticks": true 
+},
+"xtitle": "log(penalty)",
+"strip_text_xsize": "12pt",
+"xsize": "12pt",
+"xangle":        0,
+"xanchor": "middle",
+"ytitle": "",
+"strip_text_ysize": "12pt",
+"ysize": "12pt",
+"yangle":        0,
+"yanchor": "end",
+"xlabs": [
+ "-5.0",
+"-2.5",
+"0.0",
+"2.5" 
+],
+"ylabs": [
+ "0.00",
+"0.25",
+"0.50",
+"0.75",
+"1.00",
+"5",
+"10",
+"15",
+"20" 
+],
+"title": "Selected problem, label error",
+"title_size": "14.4pt",
+"options": {
+ "width":      300,
+"height":      300 
+},
+"geoms": [
+ "geom1_vline_selection",
+"geom2_segment_selection",
+"geom3_point_selection" 
+] 
+},
+"profile": {
+ "panel_margin_lines":     0.27,
+"legend": {
+ "error type": {
+ "guide": "legend",
+"geoms": "polygon",
+"title": "error type",
+"class": "status",
+"selector": "status",
+"is_discrete": true,
+"legend_type": "linetype",
+"text_size": "9.6pt",
+"title_size": "12pt",
+"entries": [
+ {
+ "polygonlinetype":        0,
+"polygoncolour": "#595959",
+"polygonsize":      0.5,
+"polygonalpha":      0.5,
+"label": "correct" 
+},
+{
+ "polygonlinetype":        3,
+"polygoncolour": "#595959",
+"polygonsize":      0.5,
+"polygonalpha":      0.5,
+"label": "false negative" 
+},
+{
+ "polygonlinetype":        1,
+"polygoncolour": "#595959",
+"polygonsize":      0.5,
+"polygonalpha":      0.5,
+"label": "false positive" 
+} 
+] 
+},
+"label": {
+ "guide": "legend",
+"geoms": "polygon",
+"title": "label",
+"class": "label",
+"selector": "label",
+"is_discrete": true,
+"legend_type": "fill",
+"text_size": "9.6pt",
+"title_size": "12pt",
+"entries": [
+ {
+ "polygonfill": "#A445EE",
+"polygoncolour": "#595959",
+"polygonsize":      0.5,
+"polygonlinetype":        1,
+"polygonalpha":      0.3,
+"label": "breakpoint" 
+},
+{
+ "polygonfill": "#FFA500",
+"polygoncolour": "#595959",
+"polygonsize":      0.5,
+"polygonlinetype":        1,
+"polygonalpha":      0.3,
+"label": "normal" 
+} 
+] 
+} 
+},
+"strips": {
+ "top": [
+ "" 
+],
+"right": [
+ "" 
+],
+"n": {
+ "top":        0,
+"right":        0 
+} 
+},
+"layout": {
+ "PANEL": [ 1 ],
+"ROW": [ 1 ],
+"COL": [ 1 ],
+"SCALE_X": [ 1 ],
+"SCALE_Y": [ 1 ],
+"AXIS_X": [ true ],
+"AXIS_Y": [ true ],
+"coord_fixed": [ false ],
+"width_proportion": [        1 ],
+"height_proportion": [        1 ] 
+},
+"panel_background": {
+ "fill": "#FFFFFF",
+"colour": "transparent",
+"size":      0.5,
+"linetype":        1 
+},
+"panel_border": {
+ "fill": "transparent",
+"colour": "#7F7F7F",
+"size":      0.5,
+"linetype":        1 
+},
+"grid_major": {
+ "colour": "#E5E5E5",
+"size":      0.2,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+        0,
+      50,
+     100,
+     150,
+     200,
+     250 
+] 
+],
+"y": [
+ [
+       -1,
+       0,
+       1 
+] 
+] 
+} 
+},
+"grid_minor": {
+ "colour": "#FAFAFA",
+"size":      0.5,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+        0,
+      25,
+      50,
+      75,
+     100,
+     125,
+     150,
+     175,
+     200,
+     225,
+     250 
+] 
+],
+"y": [
+ [
+     -1.5,
+      -1,
+    -0.5,
+       0,
+     0.5,
+       1,
+     1.5 
+] 
+] 
+} 
+},
+"axis1": {
+ "x": [
+        0,
+      50,
+     100,
+     150,
+     200,
+     250 
+],
+"xlab": [
+ "0",
+"50",
+"100",
+"150",
+"200",
+"250" 
+],
+"xrange": [ -12.45318, 261.5168 ],
+"xline": false,
+"xticks": true,
+"y": [
+       -1,
+       0,
+       1 
+],
+"ylab": [
+ "-1",
+"0",
+"1" 
+],
+"yrange": [ -1.804166,  1.52366 ],
+"yline": false,
+"yticks": true 
+},
+"xtitle": "Position on chromosome (mega bases)",
+"strip_text_xsize": "12pt",
+"xsize": "12pt",
+"xangle":        0,
+"xanchor": "middle",
+"ytitle": "Log-ratio (DNA copy number)",
+"strip_text_ysize": "12pt",
+"ysize": "12pt",
+"yangle":        0,
+"yanchor": "end",
+"xlabs": [
+ "0",
+"50",
+"100",
+"150",
+"200",
+"250" 
+],
+"ylabs": [
+ "-1",
+"0",
+"1" 
+],
+"title": "Selected problem, data sequence",
+"title_size": "14.4pt",
+"options": {
+ "width":      650,
+"height":      300 
+},
+"geoms": [
+ "geom4_tallrect_profile",
+"geom5_tallrect_profile",
+"geom6_segment_profile",
+"geom7_point_profile" 
+] 
+},
+"thresholds": {
+ "panel_margin_lines":     0.27,
+"legend": {},
+"strips": {
+ "top": [
+ "" 
+],
+"right": [
+ "" 
+],
+"n": {
+ "top":        0,
+"right":        0 
+} 
+},
+"layout": {
+ "PANEL": [ 1 ],
+"ROW": [ 1 ],
+"COL": [ 1 ],
+"SCALE_X": [ 1 ],
+"SCALE_Y": [ 1 ],
+"AXIS_X": [ true ],
+"AXIS_Y": [ true ],
+"coord_fixed": [ false ],
+"width_proportion": [        1 ],
+"height_proportion": [        1 ] 
+},
+"panel_background": {
+ "fill": "#FFFFFF",
+"colour": "transparent",
+"size":      0.5,
+"linetype":        1 
+},
+"panel_border": {
+ "fill": "transparent",
+"colour": "#7F7F7F",
+"size":      0.5,
+"linetype":        1 
+},
+"grid_major": {
+ "colour": "#E5E5E5",
+"size":      0.2,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+       -4,
+      -2,
+       0,
+       2 
+] 
+],
+"y": [
+ [
+        0,
+      10,
+      20,
+      30 
+] 
+] 
+} 
+},
+"grid_minor": {
+ "colour": "#FAFAFA",
+"size":      0.5,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+       -5,
+      -4,
+      -3,
+      -2,
+      -1,
+       0,
+       1,
+       2 
+] 
+],
+"y": [
+ [
+        0,
+       5,
+      10,
+      15,
+      20,
+      25,
+      30 
+] 
+] 
+} 
+},
+"axis1": {
+ "x": [
+       -4,
+      -2,
+       0,
+       2 
+],
+"xlab": [
+ "-4",
+"-2",
+"0",
+"2" 
+],
+"xrange": [ -5.987005, 2.898968 ],
+"xline": false,
+"xticks": true,
+"y": [
+        0,
+      10,
+      20,
+      30 
+],
+"ylab": [
+ "0",
+"10",
+"20",
+"30" 
+],
+"yrange": [    -0.45,    31.45 ],
+"yline": false,
+"yticks": true 
+},
+"xtitle": "Constant added to log(penalty)",
+"strip_text_xsize": "12pt",
+"xsize": "12pt",
+"xangle":        0,
+"xanchor": "middle",
+"ytitle": "total incorrect labels",
+"strip_text_ysize": "12pt",
+"ysize": "12pt",
+"yangle":        0,
+"yanchor": "end",
+"xlabs": [
+ "-4",
+"-2",
+"0",
+"2" 
+],
+"ylabs": [
+ "0",
+"10",
+"20",
+"30" 
+],
+"title": "Total error, select threshold",
+"title_size": "14.4pt",
+"options": {
+ "width":      250,
+"height":      300 
+},
+"geoms": [
+ "geom8_tallrect_thresholds",
+"geom9_tallrect_thresholds",
+"geom10_vline_thresholds",
+"geom11_segment_thresholds",
+"geom12_point_thresholds" 
+] 
+},
+"regression": {
+ "panel_margin_lines":        1,
+"strips": {
+ "right": [
+ "",
+"" 
+],
+"top": [
+ "BIC feature=log(log(n))",
+"Learned feature=log(var.est)" 
+],
+"n": {
+ "top":        1,
+"right":        1 
+} 
+},
+"layout": {
+ "PANEL": [ "1", "2" ],
+"ROW": [ 1, 1 ],
+"COL": [ 1, 2 ],
+"model.label": [ "BIC feature=log(log(n))", "Learned feature=log(var.est)" ],
+"SCALE_X": [ 1, 2 ],
+"SCALE_Y": [ 1, 1 ],
+"AXIS_Y": [ true, false ],
+"AXIS_X": [ true, true ],
+"coord_fixed": [ false, false ],
+"width_proportion": [      0.5,      0.5 ],
+"height_proportion": [        1,        1 ] 
+},
+"panel_background": {
+ "fill": "#FFFFFF",
+"colour": "transparent",
+"size":      0.5,
+"linetype":        1 
+},
+"panel_border": {
+ "fill": "transparent",
+"colour": "#7F7F7F",
+"size":      0.5,
+"linetype":        1 
+},
+"grid_major": {
+ "colour": "#E5E5E5",
+"size":      0.2,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+      1.6,
+     1.7,
+     1.8 
+],
+[
+       -3,
+    -2.6,
+    -2.2,
+    -1.8 
+] 
+],
+"y": [
+ [
+       -5,
+    -2.5,
+       0,
+     2.5,
+       5 
+],
+[
+       -5,
+    -2.5,
+       0,
+     2.5,
+       5 
+] 
+] 
+} 
+},
+"grid_minor": {
+ "colour": "#FAFAFA",
+"size":      0.5,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+     1.55,
+     1.6,
+    1.65,
+     1.7,
+    1.75,
+     1.8,
+    1.85 
+],
+[
+     -3.2,
+      -3,
+    -2.8,
+    -2.6,
+    -2.4,
+    -2.2,
+      -2,
+    -1.8 
+] 
+],
+"y": [
+ [
+       -5,
+   -3.75,
+    -2.5,
+   -1.25,
+       0,
+    1.25,
+     2.5,
+    3.75,
+       5 
+],
+[
+       -5,
+   -3.75,
+    -2.5,
+   -1.25,
+       0,
+    1.25,
+     2.5,
+    3.75,
+       5 
+] 
+] 
+} 
+},
+"axis1": {
+ "x": [
+      1.6,
+     1.7,
+     1.8 
+],
+"xlab": [
+ "1.6",
+"1.7",
+"1.8" 
+],
+"xrange": [ 1.534099, 1.883916 ],
+"xline": false,
+"xticks": true,
+"y": [
+       -5,
+    -2.5,
+       0,
+     2.5,
+       5 
+],
+"ylab": [
+ "-5.0",
+"-2.5",
+"0.0",
+"2.5",
+"5.0" 
+],
+"yrange": [     -5.5,      5.5 ],
+"yline": false,
+"yticks": true 
+},
+"axis2": {
+ "x": [
+       -3,
+    -2.6,
+    -2.2,
+    -1.8 
+],
+"xlab": [
+ "-3.0",
+"-2.6",
+"-2.2",
+"-1.8" 
+],
+"xrange": [ -3.372783, -1.771566 ],
+"xline": false,
+"xticks": true,
+"y": [
+       -5,
+    -2.5,
+       0,
+     2.5,
+       5 
+],
+"ylab": [
+ "-5.0",
+"-2.5",
+"0.0",
+"2.5",
+"5.0" 
+],
+"yrange": [     -5.5,      5.5 ],
+"yline": false,
+"yticks": true 
+},
+"xtitle": "feature",
+"strip_text_xsize": "12pt",
+"xsize": "12pt",
+"xangle":        0,
+"xanchor": "middle",
+"ytitle": "log(penalty)",
+"strip_text_ysize": "12pt",
+"ysize": "12pt",
+"yangle":        0,
+"yanchor": "end",
+"xlabs": [
+ "1.6",
+"1.7",
+"1.8",
+"-3.0",
+"-2.6",
+"-2.2",
+"-1.8" 
+],
+"ylabs": [
+ "-5.0",
+"-2.5",
+"0.0",
+"2.5",
+"5.0" 
+],
+"title_size": "14.4pt",
+"options": {
+ "width":      450,
+"height":      300 
+},
+"geoms": [
+ "geom13_text_regression",
+"geom14_abline_regression",
+"geom15_segment_regression",
+"geom16_point_regression",
+"geom17_point_regression" 
+] 
+},
+"roc": {
+ "panel_margin_lines":     0.27,
+"legend": {
+ "threshold": {
+ "guide": "legend",
+"geoms": "point",
+"title": "threshold",
+"class": "threshold",
+"selector": "threshold",
+"is_discrete": true,
+"legend_type": "fill",
+"text_size": "9.6pt",
+"title_size": "12pt",
+"entries": [
+ {
+ "pointfill": "#00FF00",
+"pointshape":       21,
+"pointcolour": "#000000",
+"pointsize":        4,
+"pointalpha":      0.7,
+"pointstroke":      0.5,
+"label": "predicted" 
+},
+{
+ "pointfill": "#000000",
+"pointshape":       21,
+"pointcolour": "#000000",
+"pointsize":        4,
+"pointalpha":      0.7,
+"pointstroke":      0.5,
+"label": "min.error" 
+},
+{
+ "pointfill": "#FFFFFF",
+"pointshape":       21,
+"pointcolour": "#000000",
+"pointsize":        4,
+"pointalpha":      0.7,
+"pointstroke":      0.5,
+"label": "other" 
+} 
+] 
+},
+"model.name": {
+ "guide": "legend",
+"geoms": [ "text", "path", "point" ],
+"title": "model.name",
+"class": "model.name",
+"selector": "model.name",
+"is_discrete": true,
+"legend_type": "colour",
+"text_size": "9.6pt",
+"title_size": "12pt",
+"entries": [
+ {
+ "textcolour": "#0000FF",
+"textsize":       12,
+"textangle":        0,
+"texthjust":        0,
+"textvjust":      0.5,
+"textfamily": "",
+"textfontface":        1,
+"textlineheight":      1.2,
+"label": "learned",
+"pathcolour": "#0000FF",
+"pathsize":        4,
+"pathlinetype":        1,
+"pathalpha":      0.8,
+"pointcolour": "#0000FF",
+"pointshape":       21,
+"pointsize":        4,
+"pointalpha":      0.7,
+"pointstroke":      0.5,
+"textfill": "#FFFFFF",
+"pathfill": "#FFFFFF",
+"pointfill": "#FFFFFF" 
+},
+{
+ "textcolour": "#FF0000",
+"textsize":       12,
+"textangle":        0,
+"texthjust":        0,
+"textvjust":      0.5,
+"textfamily": "",
+"textfontface":        1,
+"textlineheight":      1.2,
+"label": "BIC",
+"pathcolour": "#FF0000",
+"pathsize":        4,
+"pathlinetype":        1,
+"pathalpha":      0.8,
+"pointcolour": "#FF0000",
+"pointshape":       21,
+"pointsize":        4,
+"pointalpha":      0.7,
+"pointstroke":      0.5,
+"textfill": "#FFFFFF",
+"pathfill": "#FFFFFF",
+"pointfill": "#FFFFFF" 
+} 
+] 
+} 
+},
+"strips": {
+ "top": [
+ "" 
+],
+"right": [
+ "" 
+],
+"n": {
+ "top":        0,
+"right":        0 
+} 
+},
+"layout": {
+ "PANEL": [ 1 ],
+"ROW": [ 1 ],
+"COL": [ 1 ],
+"SCALE_X": [ 1 ],
+"SCALE_Y": [ 1 ],
+"AXIS_X": [ true ],
+"AXIS_Y": [ true ],
+"coord_fixed": [ true ],
+"width_proportion": [        1 ],
+"height_proportion": [        1 ] 
+},
+"panel_background": {
+ "fill": "#FFFFFF",
+"colour": "transparent",
+"size":      0.5,
+"linetype":        1 
+},
+"panel_border": {
+ "fill": "transparent",
+"colour": "#7F7F7F",
+"size":      0.5,
+"linetype":        1 
+},
+"grid_major": {
+ "colour": "#E5E5E5",
+"size":      0.2,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+        0,
+     0.2,
+     0.4,
+     0.6,
+     0.8,
+       1 
+] 
+],
+"y": [
+ [
+        0,
+     0.2,
+     0.4,
+     0.6,
+     0.8,
+       1 
+] 
+] 
+} 
+},
+"grid_minor": {
+ "colour": "#FAFAFA",
+"size":      0.5,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+        0,
+     0.1,
+     0.2,
+     0.3,
+     0.4,
+     0.5,
+     0.6,
+     0.7,
+     0.8,
+     0.9,
+       1 
+] 
+],
+"y": [
+ [
+        0,
+     0.1,
+     0.2,
+     0.3,
+     0.4,
+     0.5,
+     0.6,
+     0.7,
+     0.8,
+     0.9,
+       1 
+] 
+] 
+} 
+},
+"axis1": {
+ "x": [
+        0,
+     0.2,
+     0.4,
+     0.6,
+     0.8,
+       1 
+],
+"xlab": [
+ "0.0",
+"0.2",
+"0.4",
+"0.6",
+"0.8",
+"1.0" 
+],
+"xrange": [    -0.05,     1.05 ],
+"xline": false,
+"xticks": true,
+"y": [
+        0,
+     0.2,
+     0.4,
+     0.6,
+     0.8,
+       1 
+],
+"ylab": [
+ "0.0",
+"0.2",
+"0.4",
+"0.6",
+"0.8",
+"1.0" 
+],
+"yrange": [    -0.05,     1.05 ],
+"yline": false,
+"yticks": true 
+},
+"xtitle": "False Positive Rate",
+"strip_text_xsize": "12pt",
+"xsize": "12pt",
+"xangle":        0,
+"xanchor": "middle",
+"ytitle": "True Positive Rate",
+"strip_text_ysize": "12pt",
+"ysize": "12pt",
+"yangle":        0,
+"yanchor": "end",
+"xlabs": [
+ "0.0",
+"0.2",
+"0.4",
+"0.6",
+"0.8",
+"1.0" 
+],
+"ylabs": [
+ "0.0",
+"0.2",
+"0.4",
+"0.6",
+"0.8",
+"1.0" 
+],
+"title": "ROC curves, select threshold",
+"title_size": "14.4pt",
+"options": {
+ "width":      250,
+"height":      300 
+},
+"geoms": [
+ "geom18_text_roc",
+"geom19_path_roc",
+"geom20_text_roc",
+"geom21_point_roc" 
+] 
+} 
+},
+"source": "https://github.com/tdhock/change-tutorial/blob/master/figure-regression-interactive-some.R",
+"video": "https://vimeo.com/1051547245",
+"title": "BIC versus learned penalty in neuroblastoma data" 
+}

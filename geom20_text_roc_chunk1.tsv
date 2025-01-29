@@ -1,0 +1,3 @@
+x	y	label	showSelected1	showSelected2	group
+0.05	0.666666666666667	Predicted FPR=0.00 TPR=0.67	BIC	predicted	1
+0.0833333333333333	0.916666666666667	Predicted FPR=0.03 TPR=0.92	learned	predicted	2
